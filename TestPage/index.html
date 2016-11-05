@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <!--<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>-->
+    <script src="jquery-2.0.3.min.js"></script>
+    <script src="scripts.js"></script>
+    <style>
+        div{
+            margin: 3px;
+        }
+        a{
+            margin: 5px;
+        }
+        .box {
+            border: 1px solid black;
+            margin: 1px;
+            padding: 1px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="divEdit" class="box">
+        <div>CPF</div>
+        <div><input type="text" id="txtCPF" /></div>
+
+        <div>Name</div>
+        <div><input type="text" id="txtName" /></div>
+
+        <div>Email</div>
+        <div><input type="text" id="txtEmail" /></div>
+
+        <div>Marital Status (1 single, 2 married, 3 divorced, 4 widowed)</div>
+        <div><input type="text" id="txtMaritalStatus" /></div>
+
+        <div>Phone Numbers</div>
+        <div><input type="text" id="txtPhoneNumbers" /></div>
+
+        <div>Street</div>
+        <div><input type="text" id="txtStreet" /></div>
+
+        <div>City</div>
+        <div><input type="text" id="txtCity" /></div>
+
+        <div>State</div>
+        <div><input type="text" id="txtState" /></div>
+
+        <div>Country</div>
+        <div><input type="text" id="txtCountry" /></div>
+
+        <div>Zip</div>
+        <div><input type="text" id="txtZip" /></div>
+
+        <div>
+            <a href="#" onclick="save()">Save</a>
+            <a href="#" onclick="cancel()">Cancel</a>
+        </div>
+    </div>
+
+    <div id="boxList" class="box">
+        <h4>Clients:</h4>
+        <a href="#" onclick="newClient()">New client</a>
+        <div id="clientsList">
+        </div>
+    </div>
+        <script language="javascript">
+            getClients();
+            toggleListEdit();
+        </script>
+</body>
+</html>
